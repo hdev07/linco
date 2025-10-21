@@ -33,15 +33,15 @@ export const useCotizadorStore = defineStore('cotizador', {
     isStepValid: (state) => {
       switch (state.step) {
         case 1:
-          return !!(state.data.tipoEvento && state.data.aforo > 0);
+          return !!(state.data.tipoEvento && state.data.aforo && state.data.aforo > 0);
         case 2:
           return !!(state.data.fecha && state.data.horaInicio && state.data.horaFin);
         case 3:
           return !!(state.data.direccion && state.data.ciudad && state.data.cp);
         case 4:
           return (
-            state.data.seleccion?.paquetes.length > 0 ||
-            state.data.seleccion?.equipos.length > 0
+            (state.data.seleccion?.paquetes?.length ?? 0) > 0 ||
+            (state.data.seleccion?.equipos?.length ?? 0) > 0
           );
         case 5:
           return !!(
@@ -143,8 +143,8 @@ export const useCotizadorStore = defineStore('cotizador', {
 
       // Ajuste por duración (si hay más de 8 horas)
       if (this.data.horaInicio && this.data.horaFin) {
-        const inicio = parseInt(this.data.horaInicio.split(':')[0]);
-        const fin = parseInt(this.data.horaFin.split(':')[0]);
+        const inicio = parseInt(this.data.horaInicio.split(':')[0] || '0');
+        const fin = parseInt(this.data.horaFin.split(':')[0] || '0');
         const duracion = fin - inicio;
         if (duracion > 8) {
           total += (duracion - 8) * 1000; // $1,000 por hora extra

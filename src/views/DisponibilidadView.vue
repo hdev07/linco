@@ -142,7 +142,7 @@ const calendarDays = computed(() => {
 });
 
 function createDayObject(date: Date, isCurrentMonth: boolean) {
-  const dateString = date.toISOString().split('T')[0];
+  const dateString = date.toISOString().split('T')[0] || '';
   const today = new Date();
   today.setHours(0, 0, 0, 0);
 
