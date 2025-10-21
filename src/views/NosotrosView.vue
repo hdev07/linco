@@ -115,6 +115,11 @@
       </div>
     </section>
 
+    <!-- Marcas -->
+    <section class="brands-section-wrapper">
+      <BrandsSection title="Marcas de Confianza" subtitle="Trabajamos exclusivamente con equipos de las mejores marcas del mercado" />
+    </section>
+
     <!-- Certifications -->
     <section class="certifications-section">
       <div class="container">
@@ -179,6 +184,7 @@
 
 <script setup lang="ts">
 import BaseButton from '@/components/ui/BaseButton.vue';
+import BrandsSection from '@/components/ui/BrandsSection.vue';
 
 const handleImageError = (event: Event) => {
   const target = event.target as HTMLImageElement;
@@ -255,6 +261,10 @@ const handleImageError = (event: Event) => {
 
 .values-section {
   @apply py-16 bg-gray-50;
+}
+
+.brands-section-wrapper {
+  @apply bg-white py-16;
 }
 
 .values-grid {

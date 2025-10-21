@@ -108,16 +108,9 @@
       </div>
     </section>
 
-    <!-- Clientes -->
-    <section class="clients-section">
-      <div class="container">
-        <h2 class="section-title-small">Confían en nosotros</h2>
-        <div class="clients-grid">
-          <div v-for="i in 8" :key="i" class="client-logo">
-            <div class="logo-placeholder">Cliente {{ i }}</div>
-          </div>
-        </div>
-      </div>
+    <!-- Marcas -->
+    <section class="brands-section-wrapper">
+      <BrandsSection title="Marcas con las que Trabajamos" subtitle="Equipos certificados de las mejores marcas del mercado" />
     </section>
 
     <!-- Testimonios -->
@@ -177,6 +170,7 @@ import ServiceCard from '@/components/ui/ServiceCard.vue';
 import PaqueteCard from '@/components/ui/PaqueteCard.vue';
 import TestimonialCard from '@/components/ui/TestimonialCard.vue';
 import BaseButton from '@/components/ui/BaseButton.vue';
+import BrandsSection from '@/components/ui/BrandsSection.vue';
 import { useCatalogoStore } from '@/stores/catalogo';
 import { useBackgroundParallax, useFadeInOnScroll } from '@/composables/useParallax';
 
@@ -193,7 +187,7 @@ const trustItems = [
   {
     icon: '✓',
     title: 'Equipo Certificado',
-    description: 'Marcas líderes: Shure, JBL, Chauvet',
+    description: 'Marcas líderes: Yamaha, dbx, Pioneer DJ',
   },
   {
     icon: '🔧',
@@ -421,21 +415,9 @@ section {
   @apply text-white/80 text-sm;
 }
 
-/* Clients Section */
-.clients-section {
-  @apply bg-gray-50 py-12;
-}
-
-.clients-grid {
-  @apply grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4;
-}
-
-.client-logo {
-  @apply flex items-center justify-center aspect-square;
-}
-
-.logo-placeholder {
-  @apply w-full h-full flex items-center justify-center bg-white rounded-lg shadow-sm text-xs text-gray-400 font-medium;
+/* Brands Section */
+.brands-section-wrapper {
+  @apply bg-gray-50 py-16;
 }
 
 /* Testimonials Section */

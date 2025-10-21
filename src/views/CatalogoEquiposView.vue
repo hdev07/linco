@@ -185,7 +185,7 @@ const equiposFiltrados = computed(() => catalogoStore.equiposFiltrados);
 
 const topTags = computed(() => {
   return catalogoStore.allTags.filter((tag) =>
-    ['Shure', 'JBL', 'Chauvet', 'LED'].includes(tag)
+    ['Yamaha', 'QRX Audio', 'CYM Pro Led', 'dbx by Harman', 'Pioneer DJ', 'AlphaTheta', '18 Eighteen Sound'].includes(tag)
   );
 });
 

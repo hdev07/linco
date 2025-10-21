@@ -45,10 +45,10 @@
               <span class="amount">$8,000</span>
             </div>
             <ul class="includes-list">
-              <li>Bocinas activas</li>
-              <li>Micrófonos</li>
-              <li>Consola digital</li>
-              <li>Cableado</li>
+              <li>Bocinas activas QRX Audio</li>
+              <li>Micrófonos profesionales</li>
+              <li>Consola digital Yamaha</li>
+              <li>Procesador dbx by Harman</li>
               <li>Técnico certificado</li>
             </ul>
             <BaseButton to="/cotizar?servicio=audio" variant="outline" size="md" class="w-full">
@@ -63,11 +63,11 @@
               <span class="amount">$6,000</span>
             </div>
             <ul class="includes-list">
-              <li>Focos LED</li>
+              <li>Focos LED CYM Pro</li>
               <li>Moving heads</li>
-              <li>Control DMX</li>
+              <li>Control DMX 512</li>
               <li>Truss y montaje</li>
-              <li>Programación</li>
+              <li>Programación personalizada</li>
             </ul>
             <BaseButton to="/cotizar?servicio=iluminacion" variant="outline" size="md" class="w-full">
               Cotizar
